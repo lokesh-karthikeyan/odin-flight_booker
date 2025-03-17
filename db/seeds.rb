@@ -9,16 +9,16 @@
 #   end
 
 Airport.create([
-  { code: "MAA" },
-  { code: "CJB" },
-  { code: "TRZ" },
-  { code: "IXM" },
-  { code: "DEL" },
-  { code: "BOM" },
-  { code: "BLR" },
-  { code: "HYD" },
-  { code: "COK" },
-  { code: "GOI" }
+  { code: "MAA", city: "Chennai" },
+  { code: "CJB", city: "Coimbatore" },
+  { code: "TRZ", city: "Tiruchirappalli" },
+  { code: "IXM", city: "Madurai" },
+  { code: "DEL", city: "Delhi" },
+  { code: "BOM", city: "Mumbai" },
+  { code: "BLR", city: "Bengaluru" },
+  { code: "HYD", city: "Hyderabad" },
+  { code: "COK", city: "Kochi" },
+  { code: "GOI", city: "Dabolim, Goa" }
 ])
 
 Flight.create([
