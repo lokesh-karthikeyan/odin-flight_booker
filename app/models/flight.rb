@@ -1,6 +1,8 @@
 class Flight < ApplicationRecord
   belongs_to :departure_airport, class_name: "Airport"
   belongs_to :arrival_airport, class_name: "Airport"
+  has_many :bookings
+  has_many :passengers, through: :bookings
 
   def self.find_flights(controller_params)
     if valid_controller_params?(controller_params)
