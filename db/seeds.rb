@@ -23,15 +23,25 @@ Airport.create([
 
 Flight.create([
   { departure_airport: Airport.find_by(code: "MAA"), arrival_airport: Airport.find_by(code: "CJB"), starts_at: Time.now + 1.day, duration: 300 },
+  { departure_airport: Airport.find_by(code: "MAA"), arrival_airport: Airport.find_by(code: "CJB"), starts_at: Time.now + 2.day, duration: 300 },
   { departure_airport: Airport.find_by(code: "TRZ"), arrival_airport: Airport.find_by(code: "GOI"), starts_at: Time.now + 2.days, duration: 320 },
+  { departure_airport: Airport.find_by(code: "TRZ"), arrival_airport: Airport.find_by(code: "GOI"), starts_at: Time.now + 1.day, duration: 320 },
   { departure_airport: Airport.find_by(code: "IXM"), arrival_airport: Airport.find_by(code: "BOM"), starts_at: Time.now + 3.days, duration: 200 },
+  { departure_airport: Airport.find_by(code: "IXM"), arrival_airport: Airport.find_by(code: "BOM"), starts_at: Time.now + 1.day, duration: 200 },
   { departure_airport: Airport.find_by(code: "DEL"), arrival_airport: Airport.find_by(code: "MAA"), starts_at: Time.now + 1.day, duration: 350 },
+  { departure_airport: Airport.find_by(code: "DEL"), arrival_airport: Airport.find_by(code: "MAA"), starts_at: Time.now + 2.days, duration: 350 },
   { departure_airport: Airport.find_by(code: "BOM"), arrival_airport: Airport.find_by(code: "BLR"), starts_at: Time.now + 5.days, duration: 360 },
+  { departure_airport: Airport.find_by(code: "BOM"), arrival_airport: Airport.find_by(code: "BLR"), starts_at: Time.now + 4.days, duration: 360 },
   { departure_airport: Airport.find_by(code: "BLR"), arrival_airport: Airport.find_by(code: "TRZ"), starts_at: Time.now + 11.days, duration: 400 },
+  { departure_airport: Airport.find_by(code: "BLR"), arrival_airport: Airport.find_by(code: "TRZ"), starts_at: Time.now + 8.days, duration: 400 },
   { departure_airport: Airport.find_by(code: "HYD"), arrival_airport: Airport.find_by(code: "COK"), starts_at: Time.now + 5.days, duration: 120 },
+  { departure_airport: Airport.find_by(code: "HYD"), arrival_airport: Airport.find_by(code: "COK"), starts_at: Time.now + 2.days, duration: 120 },
   { departure_airport: Airport.find_by(code: "COK"), arrival_airport: Airport.find_by(code: "GOI"), starts_at: Time.now + 1.day, duration: 300 },
+  { departure_airport: Airport.find_by(code: "COK"), arrival_airport: Airport.find_by(code: "GOI"), starts_at: Time.now + 2.days, duration: 300 },
   { departure_airport: Airport.find_by(code: "COK"), arrival_airport: Airport.find_by(code: "MAA"), starts_at: Time.now + 3.days, duration: 320 },
-  { departure_airport: Airport.find_by(code: "MAA"), arrival_airport: Airport.find_by(code: "CJB"), starts_at: Time.now + 4.days, duration: 340 }
+  { departure_airport: Airport.find_by(code: "COK"), arrival_airport: Airport.find_by(code: "MAA"), starts_at: Time.now + 1.day, duration: 320 },
+  { departure_airport: Airport.find_by(code: "MAA"), arrival_airport: Airport.find_by(code: "CJB"), starts_at: Time.now + 4.days, duration: 340 },
+  { departure_airport: Airport.find_by(code: "MAA"), arrival_airport: Airport.find_by(code: "CJB"), starts_at: Time.now + 5.days, duration: 340 }
 ])
 
 Booking.create([
