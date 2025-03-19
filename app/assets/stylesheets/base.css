@@ -1,0 +1,29 @@
+@import "normalize/normalize.css";
+
+@font-face {
+  font-family: "Roboto";
+  src:
+    url("/fonts/Roboto-Regualr.woff2") format("woff2"),
+    url("/fonts/Roboto-Regualr.woff") format("woff");
+}
+
+:root {
+  --system-ui:
+    system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --card-bg: hsla(0 0% 80% / 0.9);
+  --light-green: hsl(114 69% 83%);
+  --light-blue: hsl(216 69% 61%);
+  --black: hsl(0 0% 0%);
+  --dark-blue: hsl(232 69% 42%);
+  --white: hsl(360 100% 100%);
+  --yellow: hsl(58 79% 77%);
+}
+
+body {
+  background-image: url("flight.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Roboto", var(--system-ui);
+  font-size: 16px;
+}
