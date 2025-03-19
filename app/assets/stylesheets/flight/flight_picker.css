@@ -1,0 +1,41 @@
+.flight-picker {
+  background-color: var(--card-bg);
+  max-width: 80vw;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  gap: 2rem;
+  > form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    > div {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      > .passenger-fields & label {
+        font-weight: 900;
+      }
+      & select {
+        width: 100%;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        border: solid 2px black;
+      }
+      & input[type="submit"] {
+        padding: 1rem 0;
+        background-color: var(--dark-blue);
+        color: var(--white);
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      & input[type="submit"]:hover {
+        transform: scale(1.05);
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+}
