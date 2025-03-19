@@ -1,0 +1,22 @@
+<div class="available-flights">
+  <% if available_flights %>
+    <%= form_with method: :get, url: new_booking_path do |form| %>
+      <% available_flights.each do |flight| %>
+        <div>
+          <%= form.hidden_field "passengers", value: passenger_count %>
+          <div>
+            <%= form.radio_button :flight, flight.id, options = { id: "flight", required: true } %>
+            <%= form.label :flight,
+                       "#{flight.id} : #{flight.departure_airport.city}(#{flight.departure_airport.code}) -> #{flight.arrival_airport.city}(#{flight.arrival_airport.code}) departs on #{flight.starts_at.to_formatted_s} " %>
+          </div>
+          <div>
+            <%= form.submit "Book Flight" %>
+          </div>
+        </div>
+      <% end %>
+      <% if !available_flights.nil? && available_flights.empty? %>
+        <h2 class="no-flights">No flights found!</h2>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>

@@ -1,0 +1,13 @@
+<div class="flight-picker">
+  <%= render partial: "flight_picker",
+  locals: {
+    locations: @locations,
+    passengers: @passengers,
+    dates: @dates,
+  } %>
+  <%= render partial: "search_flights",
+  locals: {
+    available_flights: @available_flights,
+    passenger_count: @passenger_count,
+  } %>
+</div>

@@ -1,0 +1,49 @@
+<%= form_with method: :get, url: flights_path do |form| %>
+  <div>
+    <div>
+      <%= form.label :departure %>
+    </div>
+    <div>
+      <%= form.select :departure,
+                  locations,
+                  { prompt: "Select your departure location" },
+                  required: true %>
+    </div>
+  </div>
+  <div>
+    <div>
+      <%= form.label :destination %>
+    </div>
+    <div>
+      <%= form.select :destination,
+                  locations,
+                  { prompt: "Select your destination location" },
+                  required: true %>
+    </div>
+  </div>
+  <div>
+    <div>
+      <%= form.label :passengers %>
+    </div>
+    <div>
+      <%= form.select :passengers,
+                  passengers,
+                  { prompt: "Select passengers count" },
+                  required: true %>
+    </div>
+  </div>
+  <div>
+    <div>
+      <%= form.label :date_and_time %>
+    </div>
+    <div>
+      <%= form.select :date_and_time,
+                  dates,
+                  { prompt: "Select your date and time" },
+                  required: true %>
+    </div>
+  </div>
+  <div>
+    <%= form.submit "Available Flights" %>
+  </div>
+<% end %>
