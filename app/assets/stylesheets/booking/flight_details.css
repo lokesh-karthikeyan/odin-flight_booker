@@ -1,0 +1,9 @@
+.flight-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  & strong {
+    display: inline-block;
+    width: 15ch;
+  }
+}
