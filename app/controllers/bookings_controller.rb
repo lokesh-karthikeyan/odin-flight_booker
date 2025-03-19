@@ -8,7 +8,7 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    Rails.logger.debug "ZZZZZ #{params}"
+
     if @booking.save
       redirect_to @booking, notice: "Booking was successful!"
     else
