@@ -1,0 +1,10 @@
+<div class="passenger">
+  <div class="flight-details-wrapper">
+    <h2>Flight details</h2>
+    <%= render partial: "flight", locals: { flight: @flight } %>
+  </div>
+  <div class="passenger-form">
+    <h2>Fill out the Passenger details</h2>
+    <%= render partial: "form", locals: { booking: @booking, flight_id: @flight.id } %>
+  </div>
+</div>

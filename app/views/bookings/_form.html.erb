@@ -1,0 +1,22 @@
+<%= form_with model: booking do |booking_form| %>
+  <div>
+    <%= booking_form.fields_for :passengers do |passenger_form| %>
+      <div class="passenger-fields">
+        <div>
+          <div><%= passenger_form.label :name %></div>
+          <div><%= passenger_form.text_field :name, placeholder: "John Doe", required: true %></div>
+        </div>
+        <div>
+          <div><%= passenger_form.label :email %></div>
+          <div><%= passenger_form.email_field :email,
+                                       placeholder: "johndoe@example.com",
+                                       required: true %></div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div>
+    <%= booking_form.hidden_field "flight_id", value: flight_id %>
+    <%= booking_form.submit "Confirm Ticket" %>
+  </div>
+<% end %>

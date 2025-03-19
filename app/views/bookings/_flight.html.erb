@@ -1,0 +1,18 @@
+<div class="flight-details">
+  <p>
+    <strong>Flight no &nbsp;&nbsp;:
+    </strong><%= flight.id %>
+  </p>
+  <p>
+    <strong>Departs from:
+    </strong><%= flight.departure_airport.city %>(<%= flight.departure_airport.code %>)
+  </p>
+  <p>
+    <strong>Arrives to &nbsp;:
+    </strong><%= flight.arrival_airport.city %>(<%= flight.arrival_airport.code %>)
+  </p>
+  <p>
+    <strong>Leaves at &nbsp;&nbsp;:
+    </strong><%= flight.starts_at.strftime("%d-%b-%Y | %I:%M %p") %>
+  </p>
+</div>
