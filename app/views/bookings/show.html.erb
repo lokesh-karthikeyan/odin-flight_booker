@@ -1,0 +1,11 @@
+<div class="ticket-details-wrapper">
+  <div class="ticket-details">
+    <h2>Your booking was succesful! Bon Voyage!!</h2>
+    <% @booking.passengers.each do |passenger| %>
+      <div>
+        <h3><%= passenger.name %></h3>
+        <%= render partial: "flight", locals: { flight: @booking.flight } %>
+      </div>
+    <% end %>
+  </div>
+</div>
