@@ -5,6 +5,24 @@
   </div>
   <div class="passenger-form">
     <h2>Fill out the Passenger details</h2>
-    <%= render partial: "form", locals: { booking: @booking, flight_id: @flight.id } %>
+    <%= render partial: "form",
+    locals: {
+      booking: @booking,
+      flight_id: @flight.id,
+      passenger_count: @passenger_count,
+    } %>
   </div>
 </div>
+
+<template>
+  <div class="passenger-fields">
+    <div>
+      <div><%= label_tag :name %></div>
+      <div><%= text_field_tag :name, nil, placeholder: "John Doe", required: true %></div>
+    </div>
+    <div>
+      <div><%= label_tag :email %></div>
+      <div><%= email_field_tag :email, nil, placeholder: "johndoe@example.com", required: true %></div>
+    </div>
+  </div>
+</template>
