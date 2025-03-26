@@ -22,10 +22,29 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    > form {
+    & form {
       display: flex;
       flex-direction: column;
       gap: 2rem;
+      > .modify-passenger {
+        > button {
+          padding: 1rem 0;
+          font-weight: bold;
+          border-radius: 5px;
+          cursor: pointer;
+          width: 100%;
+        }
+        > button:hover {
+          transform: scale(1.05);
+          transition: all 0.3s ease-in-out;
+        }
+        > button:first-child {
+          background-color: var(--light-green);
+        }
+        > button:last-child {
+          background-color: var(--light-blue);
+        }
+      }
       > div {
         display: grid;
         grid-template-columns: repeat(2, 2fr);
