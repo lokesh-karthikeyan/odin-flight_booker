@@ -1,5 +1,5 @@
 <%= form_with model: booking do |booking_form| %>
-  <div>
+  <div class="passenger-form-container">
     <%= booking_form.fields_for :passengers do |passenger_form| %>
       <div class="passenger-fields">
         <div>
@@ -14,6 +14,10 @@
         </div>
       </div>
     <% end %>
+  </div>
+  <div class="modify-passenger" data-controller="passenger" data-passenger-count-value= <%= passenger_count %>>
+    <button data-action="passenger#add">Add Passenger</button>
+    <button data-action="passenger#remove">Remove Passenger</button>
   </div>
   <div>
     <%= booking_form.hidden_field "flight_id", value: flight_id %>
