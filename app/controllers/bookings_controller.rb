@@ -10,6 +10,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
 
     if @booking.save
+      @booking.passengers.each { |passenger| PassengerMailer.with(booking_info: @booking, passenger: passenger).ticket_booked.deliver_now }
       redirect_to @booking, notice: "Booking was successful!"
     else
       render :new, status: :unprocessable_entity
