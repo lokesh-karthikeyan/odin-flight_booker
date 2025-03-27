@@ -3,11 +3,20 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <style>
-      /* Email styles need to be inline */
+      .flight-details-wrapper {
+        background-color: hsl(216 69% 61%);
+        padding: 1rem;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+      }
     </style>
   </head>
 
   <body>
     <%= yield %>
+    <p>Thanks,</p>
+    <h5>Odin Flight booker</h5>
   </body>
 </html>
