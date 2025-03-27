@@ -1,0 +1,27 @@
+<p>Hi
+  <%= @passenger.name %>,</p>
+
+<p>With reference to the booking id
+  <%= link_to @booking_info.id, @url %>, a ticket has been successfully booked for the following flight.</p>
+
+<div class="flight-details-wrapper">
+  <p>
+    <strong>Flight no &nbsp;&nbsp;:
+    </strong><%= @booking_info.flight.id %>
+  </p>
+  <p>
+    <strong>Departs from:
+    </strong><%= @booking_info.flight.departure_airport.city %>(<%= @booking_info.flight.departure_airport.code %>)
+  </p>
+  <p>
+    <strong>Arrives to &nbsp;:
+    </strong><%= @booking_info.flight.arrival_airport.city %>(<%= @booking_info.flight.arrival_airport.code %>)
+  </p>
+  <p>
+    <strong>Leaves at &nbsp;&nbsp;:
+    </strong><%= @booking_info.flight.starts_at.strftime("%d-%b-%Y | %I:%M %p") %>
+  </p>
+</div>
+
+<p>To view your booking details, please visit
+  <%= link_to "booking details", @url %></p>

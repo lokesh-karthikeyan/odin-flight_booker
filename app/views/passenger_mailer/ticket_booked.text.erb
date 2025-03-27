@@ -1,0 +1,17 @@
+Hi <%= @passenger.name %>,
+
+With reference to the booking id <%= @booking_info.id %>, a ticket has been successfully booked for the following flight.
+
++===============================================
+| Flight no    : <%= @booking_info.flight.id %>
++-----------------------------------------------
+| Departs from : <%= @booking_info.flight.departure_airport.city %>(<%= @booking_info.flight.departure_airport.code %>)
++-----------------------------------------------
+| Arrives to   : <%= @booking_info.flight.arrival_airport.city %>(<%= @booking_info.flight.arrival_airport.code %>)
++-----------------------------------------------
+| Leaves at    : <%= @booking_info.flight.starts_at.strftime("%d-%b-%Y | %I:%M %p") %>
++===============================================
+
+*************************************************************************************************************************
+
+To view your booking details, please visit <%= @url %>
